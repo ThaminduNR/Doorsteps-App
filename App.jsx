@@ -7,9 +7,15 @@
 
 import React from 'react';
 import AppNavigation from './src/navigation/AppNavigation';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 
 function App() {
-  return <AppNavigation />;
+  const queryClient = new QueryClient();
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AppNavigation />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
