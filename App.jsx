@@ -6,20 +6,10 @@
  */
 
 import React from 'react';
-import { Text, View } from 'react-native';
+import AppNavigation from './src/navigation/AppNavigation';
 
-function App(){
-
-  return (
-    <View>
-      <Text className="text-2xl text-black mt-4">
-        Hello, World!
-      </Text>
-    </View>
-   
-  );
+function App() {
+  return <AppNavigation />;
 }
-
-
 
 export default App;
