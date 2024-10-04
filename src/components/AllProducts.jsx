@@ -1,13 +1,23 @@
 import {View, Text, FlatList, Image, TouchableOpacity} from 'react-native';
 import Bookmark from 'react-native-vector-icons/Ionicons';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
 
 const AllProducts = ({products}) => {
   console.log('products', products);
 
+  const navigation = useNavigation();
+
+  const navigateProductPage = () => {
+    navigation.navigate('Product');
+  };
+
   const renderItem = ({item, index}) => {
     return (
-      <TouchableOpacity className="mb-4 mx-4 space-y-1" key={index}>
+      <TouchableOpacity
+        className="mb-4 mx-4 space-y-1"
+        key={index}
+        onPress={navigateProductPage}>
         <View className="flex-row justify-start w-[100%] shadow-sm">
           <Image
             source={{uri: item.mainImage}}

@@ -6,8 +6,12 @@ import CartScreen from '../screens/CartScreen';
 import AccountScreen from '../screens/AccountScreen';
 import SearchScreen from '../screens/SearchScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import SplashScreen from '../screens/SplashScreen';
+import ProductScreen from '../screens/ProductScreen';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const AppNavigation = () => {
   const TabNavigator = () => {
@@ -57,9 +61,22 @@ const AppNavigation = () => {
     );
   };
 
+  const StackNavigator = () => {
+    return (
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="HomeTabs" component={TabNavigator} />
+        <Stack.Screen name="Product" component={ProductScreen} />
+        <Stack.Screen name="Splash" component={SplashScreen} />
+      </Stack.Navigator>
+    );
+  };
+
   return (
     <NavigationContainer>
-      <TabNavigator />
+      <StackNavigator />
     </NavigationContainer>
   );
 };

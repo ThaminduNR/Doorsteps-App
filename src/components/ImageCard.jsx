@@ -10,13 +10,13 @@ const ImageCard = ({flashSale}) => {
           <View
             key={index}
             style={{
-              width: 110,
-              height: 140,
-              borderRadius: 10,
-              padding: 8,
-              boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-            }}>
-            <View>
+              width: 115,
+              height: 160,
+              borderRadius: 8,
+              backgroundColor: '#E5E5E5',
+            }}
+            className="shadow-md shadow-gray-500/60">
+            <View className="mt-5">
               <Image
                 source={item.image}
                 style={{

@@ -31,75 +31,21 @@ function HomeScreen() {
       id: 1,
       title: 'Shoes',
       price: 100.0,
-      image: require('../assets/images/nike.jpg'),
+      image: require('../assets/images/nike.png'),
     },
     {
       id: 2,
       title: 'T-Shirt',
       price: 200.0,
-      image: require('../assets/images/tshirt.jpg'),
+      image: require('../assets/images/tshirt.png'),
     },
     {
       id: 3,
       title: 'Back Pack',
       price: 300.0,
-      image: require('../assets/images/bag.jpg'),
+      image: require('../assets/images/bag.png'),
     },
   ];
-  // const allProducts = [
-  //   {
-  //     id: 1,
-  //     title: 'Nike Air Relentless 4 Mens Running Shoes ',
-  //     price: 100.0,
-  //     image: require('../assets/images/main_banner.jpg'),
-  //     sizes: ['8', '9', '10', '11'],
-  //     stockStatus: 'In Stock',
-  //     description: 'lorem ipsum dolor sit amet consectetur adipisicing elit',
-  //     color: 'black',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'PUMA Future Disc Lite Op V2',
-  //     price: 200.0,
-  //     image: require('../assets/images/main_banner.jpg'),
-  //     sizes: ['8', '9', '10', '11'],
-  //     stockStatus: 'In Stock',
-  //     description: 'lorem ipsum dolor sit amet consectetur adipisicing elit',
-  //     color: 'blue',
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'UMA Soleil v2',
-  //     price: 300.0,
-  //     image: require('../assets/images/main_banner.jpg'),
-  //     sizes: ['8', '9', '10', '11'],
-  //     stockStatus: 'In Stock',
-  //     description: 'lorem ipsum dolor sit amet consectetur adipisicing elit',
-  //     color: 'Green',
-  //   },
-  //   {
-  //     id: 4,
-  //     title: 'UMA Soleil v2',
-  //     price: 300.0,
-  //     image: require('../assets/images/main_banner.jpg'),
-  //     sizes: ['8', '9', '10', '11'],
-  //     stockStatus: 'In Stock',
-  //     description: 'lorem ipsum dolor sit amet consectetur adipisicing elit',
-  //     color: 'Green',
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'UMA Soleil v2',
-  //     price: 300.0,
-  //     image: require('../assets/images/main_banner.jpg'),
-  //     sizes: ['8', '9', '10', '11'],
-  //     stockStatus: 'In Stock',
-  //     description: 'lorem ipsum dolor sit amet consectetur adipisicing elit',
-  //     color: 'Green',
-  //   },
-  // ];
-
-  // const [activeCategory, setActiveCategory] = useState('Clothes');
 
   //get all products
   const {isLoading: isAllProductLoading, data: allProducts} = useQuery({
