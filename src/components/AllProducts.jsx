@@ -8,8 +8,8 @@ const AllProducts = ({products}) => {
 
   const navigation = useNavigation();
 
-  const navigateProductPage = () => {
-    navigation.navigate('Product');
+  const navigateProductPage = item => {
+    navigation.navigate('Product', {item});
   };
 
   const renderItem = ({item, index}) => {
@@ -17,7 +17,7 @@ const AllProducts = ({products}) => {
       <TouchableOpacity
         className="mb-4 mx-4 space-y-1"
         key={index}
-        onPress={navigateProductPage}>
+        onPress={() => navigateProductPage(item)}>
         <View className="flex-row justify-start w-[100%] shadow-sm">
           <Image
             source={{uri: item.mainImage}}
