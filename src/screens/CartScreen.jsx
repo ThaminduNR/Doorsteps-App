@@ -34,7 +34,7 @@ const CartScreen = () => {
             </View>
             <View className="flex-1 flex-row justify-between items-center">
               <Text style={{fontFamily: 'Poppins-Regular', color: 'black'}}>
-                Quantity : 2
+                Quantity : 1
               </Text>
               <TouchableOpacity className="p-1 bg-slate-300 rounded-full">
                 <Icon size={22} color={'black'} name="trash-outline" />
@@ -44,7 +44,12 @@ const CartScreen = () => {
         </View>
       </View>
       {/* Button area */}
-      <View style={{flex: 1}} className="mx-4">
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'space-between',
+        }}
+        className="mx-4">
         <View className="flex-row justify-between items-center">
           <Text
             style={{
@@ -52,7 +57,7 @@ const CartScreen = () => {
               color: 'black',
               fontSize: 20,
             }}>
-            Total
+            Total Payment
           </Text>
           <Text
             style={{
@@ -60,7 +65,7 @@ const CartScreen = () => {
               color: 'black',
               fontSize: 20,
             }}>
-            $ 48.00
+            $ 24.00
           </Text>
         </View>
         <TouchableOpacity
@@ -71,6 +76,7 @@ const CartScreen = () => {
             justifyContent: 'center',
             borderRadius: 15,
             marginTop: 10,
+            marginBottom: 20,
           }}>
           <Text
             style={{
