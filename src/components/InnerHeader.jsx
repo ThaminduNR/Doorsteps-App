@@ -3,8 +3,9 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const InnerHeader = ({label}) => {
+const InnerHeader = ({label, iconName}) => {
   const navigation = useNavigation();
+  console.log('Icon name', iconName);
 
   const goBack = () => {
     navigation.goBack();
@@ -27,7 +28,7 @@ const InnerHeader = ({label}) => {
       </View>
       <View className="flex-row space-x-3 rounded-full justify-center items-center">
         <TouchableOpacity className=" p-1 rounded-md">
-          <Icon size={25} color={'black'} name="heart-sharp" />
+          <Icon size={25} color={'black'} name={iconName} />
         </TouchableOpacity>
       </View>
     </View>

@@ -25,7 +25,7 @@ const AppNavigation = () => {
             if (route.name === 'Home') {
               iconName = 'home-outline';
             } else if (route.name === 'Cart') {
-              iconName = 'bag-check-outline';
+              iconName = 'cart-outline';
             } else if (route.name === 'Account') {
               iconName = 'person-circle-outline';
             } else if (route.name === 'Search') {

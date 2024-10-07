@@ -9,7 +9,7 @@ const ProductScreen = () => {
   console.log('Product Screens item', item);
   return (
     <SafeAreaView className="flex-1 justify-between bg-white">
-      <InnerHeader label="Product Details" />
+      <InnerHeader label="Product Details" iconName="heart-sharp" />
       <View className=" mx-4 flex-2">
         <View className="w-[100%] h-[320] bg-slate-200 rounded-md mb-3">
           <Image
@@ -86,7 +86,7 @@ const ProductScreen = () => {
             <Text
               className="text-white text-lg"
               style={{fontFamily: 'Poppins-Bold'}}>
-              Add to Cart
+              Buy Now
             </Text>
           </TouchableOpacity>
 
