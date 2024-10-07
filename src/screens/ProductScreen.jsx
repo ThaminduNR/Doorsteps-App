@@ -3,10 +3,19 @@ import React from 'react';
 import InnerHeader from '../components/InnerHeader';
 import {useRoute} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {useDispatch} from 'react-redux';
+import {addToCart} from '../redux/cartSlice';
 
 const ProductScreen = () => {
   const {params: item} = useRoute();
   console.log('Product Screens item', item);
+
+  const dispatch = useDispatch();
+
+  const addtoCartItems = () => {
+    dispatch(addToCart(item));
+    console.log('Add to Cart Items', item);
+  };
   return (
     <SafeAreaView className="flex-1 justify-between bg-white">
       <InnerHeader label="Product Details" iconName="heart-sharp" />
@@ -90,7 +99,9 @@ const ProductScreen = () => {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity className="rounded-lg bg-white h-[55] w-[13%] items-center justify-center shadow-xl">
+          <TouchableOpacity
+            className="rounded-lg bg-white h-[55] w-[13%] items-center justify-center shadow-xl"
+            onPress={addtoCartItems}>
             <Icon size={35} color={'black'} name="cart-outline" />
           </TouchableOpacity>
         </View>
